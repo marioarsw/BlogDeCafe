@@ -165,6 +165,7 @@ img {
     text-transform: uppercase;
     font-weight: 700; /*O bold*/
     margin-bottom: 2rem;
+    border: none;
 }
 
 @media (min-width: 768px) {
@@ -185,6 +186,10 @@ img {
         Block, inline, inline-block, flex y gridS
        */
    }
+}
+
+.boton:hover {
+    cursor: pointer;
 }
 
 .boton--primario {
@@ -232,7 +237,7 @@ img {
 
 /*Sobre Nosotros*/
 /*Con GRID*/
-/*
+
 @media (min-width: 768px) {
     .sobre-nosotros {
         display: grid;
@@ -240,18 +245,93 @@ img {
         column-gap: 2rem;
     }  
 }
-*/
 
 
-/*Nosotros con flex*/
+
+/*Nosotros con flex
 @media (min-width: 768px) {
    .sobre-nosotros {
        display: flex;
-       gap: 2rem;
+       /*gap: 2rem; recordar gap no soportado
+       justify-content: space-between; 
    }
 
    .sobre-nosotros__imagen,
    .sobre-nosotros__texto {
-       flex-basis: 50%; /*Este es el width cuando se usa flex*/
+       /*flex-basis: 50%; Este es el width cuando se usa flex
+       flex-basis: calc(50% - 1rem); /*un rem para imagen un rem para texto, en total 2 rem de separación
    }
+}
+*/
+
+/*Sección curso*/
+
+.curso {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+
+.curso:last-of-type {
+    padding: 0;
+    border-bottom: none;
+}
+
+@media (min-width: 768px) {
+   .curso {
+       display: grid;
+       grid-template-columns: 1fr 2fr;
+       column-gap: 2rem;
+   }
+}
+
+/* Esto es código duplicado, se puede poner arriba con otros*/
+.curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold; /*700*/
+}
+
+.curso__info {
+    font-weight: normal; /*400*/
+}
+
+.curso__label,
+.curso__info {
+    font-size: 2rem;
+}
+
+/*Contacto*/
+
+.contacto-bg {
+    background-image: url(/img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+
+.campo {
+    display: flex; /*Para poder usar flex: 0 0 9;*/
+    margin-bottom: 2rem;
+}
+
+.campo__label {
+    flex: 0 0 9rem; /*Para que no crezca y deje el tamaño fijo*/
+    /*No creces y no te haces más pequeño, pero el tamaño será 9rem siempre*/
+    text-align: right;
+    padding-right: 2rem; /*gap 2rem*/
+}
+
+.campo__field {
+    flex: 1; /*Va a tomar todo lo que quede disponible*/
+    border: 1px solid var(--gris);
+}
+
+.campo__field--textarea {
+    height: 200px;
 }
