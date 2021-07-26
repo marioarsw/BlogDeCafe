@@ -6,12 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlogDeCafé</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <!--PREFETCH-->
+    <!--La siguiente página que quiero que cargue para que el usuario la vea más rápido-->
+    <link rel="prefetch" href="nosotros.html" as="document">
+    <!--Con google analytics puedo ver cual es la página en la que las personas pasan más tiempo-->
+    
+    <!--PRELOAD-->
+    <!--Elemenos que quiero que carguen los más rápido posible-->
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+    crossorigin="crossorigin" as="font">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- No vale la pena precargar la imagen principal porque ya está en formato webp
+    <link rel="preload" href="/img/blog1.jpg" as="image">
+    -->
 
 </head>
 <body>
