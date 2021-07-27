@@ -99,6 +99,11 @@ img {
     margin-top: 5rem;
 }
 
+.header__texto--margin {
+    width: 96%;
+    margin: 0 auto;
+}
+
 @media (min-width: 768px) {
    .header__texto {
        margin-top: 15rem;
@@ -208,6 +213,27 @@ img {
 .boton--secundario {
     background-color: var(--primario);
 }
+
+/*Botón contacto grande en móvil*/
+
+@media (max-width: 767px) {
+    .campo__align--width {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+/* Alinear derecha boton contacto*/
+@media (min-width: 768px) {
+    .campo__align {
+        display: flex;
+        justify-content: flex-end;
+        /*flex-basis: 15rem;*/
+        /*width: 100%;*/
+    }
+}
+
 
 .cursos {
     list-style: none;
@@ -340,6 +366,8 @@ img {
 .campo__field {
     flex: 1; /*Va a tomar todo lo que quede disponible*/
     border: 1px solid var(--gris);
+    padding: 1rem;
+    width: 95%;
 }
 
 .campo__field--textarea {
